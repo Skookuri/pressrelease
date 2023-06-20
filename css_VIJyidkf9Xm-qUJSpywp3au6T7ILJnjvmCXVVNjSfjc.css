@@ -1,0 +1,392 @@
+*,:after,:before {
+    box-sizing: border-box
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+    -moz-tab-size: 4;
+    tab-size: 4
+}
+
+body {
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    margin: 0
+}
+
+hr {
+    color: inherit;
+    height: 0
+}
+
+abbr[title] {
+    text-decoration: underline dotted
+}
+
+b,strong {
+    font-weight: bolder
+}
+
+code,kbd,pre,samp {
+    font-family: ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+table {
+    border-color: inherit;
+    text-indent: 0
+}
+
+button,input,optgroup,select,textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,select {
+    text-transform: none
+}
+
+[type=button],[type=reset],[type=submit],button {
+    -webkit-appearance: button
+}
+
+::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+:-moz-ui-invalid {
+    box-shadow: none
+}
+
+legend {
+    padding: 0
+}
+
+progress {
+    vertical-align: baseline
+}
+
+::-webkit-inner-spin-button,::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+summary {
+    display: list-item
+}
+
+:root {
+    --size-content-narrow: 600px;
+    --size-form-narrow: 400px;
+    --size-radius: 4px
+}
+
+:root {
+    --options-space-gap-y: .75em;
+    --options-space-gap-x: .25em;
+    --option-line-height: var(--font-line-height-tight,1.2);
+    --option-font-size: 16px;
+    --option-font-weight: 400;
+    --option-space-gap-x: .75em;
+    --option-space-gap-y: .25em;
+    --option-input-size: .75em
+}
+
+form>*+* {
+    margin-top: var(--space-gap-y)
+}
+
+label,legend {
+    display: block;
+    font-family: var(--label-font-family,var(--font-family-interface));
+    font-size: var(--label-font-size,16px);
+    font-weight: var(--label-font-weight,var(--font-weight-bold));
+    margin-bottom: 0
+}
+
+input,textarea {
+    background-color: var(--input-color-background,#fff);
+    border-color: var(--input-color-border,var(--color-border));
+    border-radius: var(--input-size-radius,0);
+    border-style: var(--input-style-border,solid);
+    border-width: var(--input-size-border,var(--size-border,1px));
+    font-family: var(--input-font-family,var(--font-family-interface));
+    font-size: var(--input-font-size,var(--font-size-body-small));
+    max-width: 100%;
+    padding: var(--input-space-inset-y,var(--input-space-inset,6px)) var(--input-space-inset-y,var(--input-space-inset,12px))
+}
+
+textarea {
+    display: block;
+    width: 100%
+}
+
+input[type=date],input[type=email],input[type=number],input[type=password],input[type=text] {
+    height: auto
+}
+
+input[type=file] {
+    height: inherit
+}
+
+button,input[type=submit] {
+    text-transform: uppercase
+}
+
+select {
+    appearance: none;
+    background-color: var(--input-color-background,#fff);
+    border-radius: var(--input-size-radius,0);
+    color: var(--input-color-text,--color-text-interface);
+    font-family: var(--input-font-family,var(--font-family-interface));
+    font-size: var(--input-font-size,var(--font-size-body-small));
+    padding: var(--input-space-inset-y,var(--input-space-inset,6px)) var(--input-space-inset-y,var(--input-space-inset,12px));
+    text-indent: .01px;
+    text-overflow: ""
+}
+
+select::-ms-expand {
+    display: none
+}
+
+.form-item>*+* {
+    margin-top: var(--space-gap-y-minimal)
+}
+
+.form-item+.form-item {
+    margin-top: var(--space-gap-y)
+}
+
+input[type=checkbox],input[type=radio] {
+    height: var(--option-input-size,auto);
+    width: var(--option-input-size,auto)
+}
+
+.option,input[type=checkbox]+label,input[type=radio]+label {
+    display: inline-block;
+    font-size: var(--option-font-size);
+    font-weight: var(--option-font-weight);
+    line-height: var(--option-line-height)
+}
+
+.form-type-boolean+.form-type-boolean {
+    margin-top: var(--options-space-gap-y)
+}
+
+.form-type-boolean {
+    font-size: var(--option-font-size);
+    padding-left: calc(var(--option-space-gap-x) + var(--option-input-size))
+}
+
+.form-type-boolean input[type=checkbox],.form-type-boolean input[type=radio] {
+    display: inline-block;
+    font-size: inherit;
+    left: calc((var(--option-space-gap-x) + var(--option-input-size))*-1);
+    margin-right: calc((var(--option-input-size))*-1);
+    position: relative
+}
+
+.form-type-boolean input[type=checkbox]+label,.form-type-boolean input[type=radio]+label {
+    font-size: inherit
+}
+
+@supports (display: grid) {
+    .form-type-boolean {
+        column-gap:var(--option-space-gap-x);
+        display: grid;
+        grid-template-columns: var(--option-input-size) auto;
+        padding-left: 0
+    }
+
+    .form-type-boolean>* {
+        grid-column: 2
+    }
+
+    .form-type-boolean input[type=checkbox],.form-type-boolean input[type=radio] {
+        grid-column: 1;
+        left: auto;
+        margin: calc((1em - var(--option-input-size))/var(--option-line-height)) 0 0;
+        position: static
+    }
+
+    .form-type-boolean input[type=checkbox]+*,.form-type-boolean input[type=radio]+* {
+        margin-top: 0
+    }
+}
+
+.description {
+    font-family: var(--font-family-interface);
+    font-size: var(--font-size-description)
+}
+
+.filter-wrapper {
+    margin-top: 0
+}
+
+.filter-guidelines,.filter-help {
+    font-family: var(--font-family-interface);
+    font-size: var(--font-size-description)
+}
+
+.filter-guidelines ul {
+    margin-top: 0
+}
+
+.form-item-password-confirm {
+    max-width: 100%;
+    width: var(--size-form-narrow)
+}
+
+.password-strength__meter {
+    background-color: var(--color-feedback-background)
+}
+
+.password-strength__indicator.is-fair {
+    background-color: var(--color-feedback-fair)
+}
+
+.password-strength__indicator.is-strong {
+    background-color: var(--color-feedback-strong)
+}
+
+.password-strength__indicator.is-good {
+    background-color: var(--color-feedback-good)
+}
+
+.password-strength__indicator.is-weak {
+    background-color: var(--color-feedback-weak)
+}
+
+.password-confirm,.password-strength__title {
+    font-family: var(--font-family-interface);
+    font-size: var(--font-size-description)
+}
+
+.password-confirm>span,.password-strength__text {
+    font-weight: var(--font-weight-bold)
+}
+
+.password-confirm>span.error {
+    color: var(--color-feedback-error)
+}
+
+.password-confirm>span.ok {
+    color: var(--color-feedback-good)
+}
+
+.password-suggestions {
+    font-family: var(--font-family-interface);
+    font-size: var(--font-size-description);
+    font-weight: var(--font-weight-bold)
+}
+
+.password-suggestions>ul {
+    font-weight: var(--font-weight-regular)
+}
+
+img {
+    height: auto;
+    max-width: 100%
+}
+
+figure {
+    margin: 0
+}
+
+figure img {
+    display: block
+}
+
+figcaption {
+    margin: 1em 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: var(--font-family-interface);
+    font-size: var(--font-size-body-small);
+    margin-bottom: 72px;
+    margin-top: 0;
+    max-width: 100%;
+    text-align: left;
+    width: 100%
+}
+
+h1+table,h2+table,h3+table,h4+table,h5+table,table:not(:first-child) {
+    margin-top: 24px
+}
+
+thead th {
+    vertical-align: bottom
+}
+
+thead td,thead th {
+    border-bottom: 1px solid var(--table-color-border)
+}
+
+td,th {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top
+}
+
+th {
+    color: var(--color-text-heading);
+    font-weight: var(--font-weight-bold)
+}
+
+caption+thead tr:first-child td,caption+thead tr:first-child th,colgroup+thead tr:first-child td,colgroup+thead tr:first-child th,thead:first-child tr:first-child td,thead:first-child tr:first-child th {
+    border-top: 0
+}
+
+tbody+tbody {
+    border-top: 2px solid var(--color-border)
+}
+
+tr.odd {
+    background-color: var(--table-color-background-row-odd)
+}
+
+tr.even {
+    background-color: var(--table-color-background-row-even)
+}
